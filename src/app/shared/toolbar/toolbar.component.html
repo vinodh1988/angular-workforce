@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="toobar">
+    <div  class="title">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">people_outline </mat-icon>
+
+         WorkForce Management 
+        <summary class="subtitle">resource management portal</summary>
+    </div>
+    <div class="signout">
+        <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+
+            {{username}}!</button>
+    <mat-menu #menu="matMenu" >
+        <button mat-menu-item  (click)="logout()">Signout</button>
+      </mat-menu>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,13 @@
+<h1 mat-dialog-title class="header">Soft lock Request Confirmation</h1>
+<div mat-dialog-content class="content">
+  <p>Please confirm the lock request for {{data.employee_id}}</p>
+  
+    <label>Request Message(message must be atleast 10 char long)</label>
+    <textarea [(ngModel)]="data.requestmessage" ></textarea>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button color="primary" (click)="onNoClick()">Cancel</button>
+  <button mat-button  color="primary" [mat-dialog-close]="data.requestmessage" 
+   [disabled]="data.requestmessage.length<=10" >Send Request</button>
+</div>

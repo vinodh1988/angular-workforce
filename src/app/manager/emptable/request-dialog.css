@@ -1,0 +1,16 @@
+.header{
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: indigo;
+    color: white;
+}
+
+.content{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content textarea{
+    height: 100px;
+    width: 400px;
+    border: 1px solid indigo;
+}

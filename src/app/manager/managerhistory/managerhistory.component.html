@@ -1,0 +1,19 @@
+<app-toolbar></app-toolbar>
+
+<h1>Resource Soft Lock Request</h1>
+
+<div class="menu">
+        
+<mat-chip-list class="menu-items">
+    <mat-chip color="secondary" selected>
+<mat-icon aria-hidden="false" aria-label="Example home icon">lock</mat-icon>
+<a routerLink="/manager/home">
+   Request a Lock
+</a>
+</mat-chip>
+</mat-chip-list>
+
+</div>
+
+<h3>Resources you requested</h3>
+<app-shared-table [locks]="locks" ></app-shared-table>

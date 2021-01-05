@@ -1,0 +1,19 @@
+<app-toolbar></app-toolbar>
+
+<h1>WorkForce Allocation</h1>
+
+<div class="menu">
+        
+<mat-chip-list class="menu-items">
+    <mat-chip color="secondary" selected>
+<mat-icon aria-hidden="false" aria-label="Example home icon">add_alert</mat-icon>
+<a routerLink="/wfm/home">
+   Waiting Requests
+</a>
+</mat-chip>
+</mat-chip-list>
+
+</div>
+
+<h3>Requests Locked/Rejected/Expired</h3>
+<app-shared-table [locks]="locks" ></app-shared-table>

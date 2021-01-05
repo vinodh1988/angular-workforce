@@ -1,0 +1,25 @@
+
+<h1 mat-dialog-title class="header">Soft lock Request Confirmation</h1>
+<div mat-dialog-content class="content">
+  <p>Status Update for Request lock  </p>
+  <h6><span>Employee ID: </span>{{data.employee_id}}</h6>
+  <h6><span>Requestee:</span> {{data.requestee}}</h6>
+  <h6><span>Employee Manager:</span> {{data.manager}}</h6>
+  <h6><span>Request Description: </span><i>{{data.requestmessage}}</i></h6>
+  <h6>
+<span> Status</span>
+  <select [(ngModel)]="data.status">
+       <option>Decline</option>
+       <option>Approve</option>
+  </select>
+ </h6>
+  <div *ngIf="data.status=='Decline'">
+    <label>Reason to  decline(message must be atleast 10 char long)</label>
+    <textarea [(ngModel)]="data.wfmmessage" ></textarea>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button color="primary" (click)="onNoClick()">Cancel</button>
+  <button mat-button  color="primary" [mat-dialog-close]="{message:data.wfmmessage,status:data.status}" 
+   [disabled]="(data.status=='Decline'&&data.wfmmessage.length<=10)||data.status=='waiting'" >Send Request</button>
+</div>

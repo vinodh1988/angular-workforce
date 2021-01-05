@@ -1,0 +1,29 @@
+th{
+    background-color: rgb(94, 108, 153);
+    color: white;
+    width: 150px;
+    text-align: center;
+   }
+   
+   
+   #emp-tab{
+       padding-left: 10%;
+       padding-top: 20px;
+   }
+   
+   .skills{
+       width: 400px;
+       padding-left: 20%;
+   }
+   
+   .small{
+       font-size: 10px;
+       float: left;
+       margin-left: 5px;
+       border: 1px solid gray;
+       background-color: lightgray;
+       color: darkblue;
+       list-style-type:none;
+       padding:2px;
+       margin-bottom: 5px;
+   }

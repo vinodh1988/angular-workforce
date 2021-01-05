@@ -1,0 +1,17 @@
+<h1>WorkForce Allocation</h1>
+
+<div class="menu">
+        
+<mat-chip-list class="menu-items">
+    <mat-chip color="secondary" selected>
+<mat-icon aria-hidden="false" aria-label="Example home icon">history</mat-icon>
+<a routerLink="/wfm/history">
+ Approved/Declined history
+</a>
+</mat-chip>
+</mat-chip-list>
+
+</div>
+
+<h3>Requests awaiting Approval</h3>
+<app-approve-table [locks]="locks" (notify)="readData()"></app-approve-table>

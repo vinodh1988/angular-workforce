@@ -1,0 +1,50 @@
+<app-toolbar></app-toolbar>
+
+<div class="menu">
+  
+    <mat-chip-list class="menu-items">
+        <mat-chip color="secondary" selected>
+ <mat-icon aria-hidden="false" aria-label="Example home icon">history</mat-icon>
+ <a routerLink="/manager/history"> &nbsp;&nbsp; Softlock requests History</a></mat-chip>
+    
+      <mat-chip color="secondary" selected>
+<mat-icon aria-hidden="false" aria-label="Example home icon">build</mat-icon>
+<a routerLink="/manager/approved"> &nbsp;&nbsp; Handled Approved Requests</a></mat-chip>
+  </mat-chip-list>
+
+</div>
+<div class="filter-area">
+    Filter Employees:  
+        <mat-form-field class="item">
+            <mat-label>Employee name</mat-label>
+            <input matInput placeholder="Search by name" 
+             (keyup)="readMulti($event.target.value,'name')">
+          </mat-form-field>
+
+          <mat-form-field class="item">
+            <mat-label>Employee id</mat-label>
+            <input matInput placeholder="Search by employee id" 
+            (keyup)="readMulti($event.target.value,'id')">
+          </mat-form-field>
+
+          <mat-form-field class="item">
+            <mat-label>Experience</mat-label>
+            <input matInput placeholder="Search by experience" 
+            (keyup)="readMulti($event.target.value,'years')">
+          </mat-form-field>
+
+          <mat-form-field class="item">
+            <mat-label>Skills</mat-label>
+            <mat-select   (selectionChange)="readMulti($event.value,'skills')" multiple>
+              <mat-option *ngFor="let x of skills" [value]="x.name" >{{x.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+    
+</div>
+<div id="chart">
+<app-barchart [employees]="employees" [profiles]="profiles"  ></app-barchart>
+</div>
+<div class="data-table">
+    <app-emptable (notify)="readData()" [employees]="employees|filteremp:type:pattern"></app-emptable>
+</div>
