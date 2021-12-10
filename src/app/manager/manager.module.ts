@@ -19,7 +19,7 @@ const route:Routes=[
   {path:"history",component:ManagerhistoryComponent},
   {path:"approved",component:ApprovedComponent}
 ]
-
+/* Comment */
 @NgModule({
   declarations: [ManagerhomeComponent, EmptableComponent,RequestDialog,
   FilterempPipe,
