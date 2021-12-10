@@ -13,7 +13,7 @@ import { AcceptTableComponent } from './accept-table/accept-table.component';
 import { AcceptDialogComponent } from './accept-table/accept-dialog/accept-dialog.component';
 import { BarchartComponent } from './barchart/barchart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-
+/*Comment*/
 const route:Routes=[
   {path:"home",component:ManagerhomeComponent},
   {path:"history",component:ManagerhistoryComponent},
